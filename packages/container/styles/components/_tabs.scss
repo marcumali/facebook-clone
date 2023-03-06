@@ -1,0 +1,128 @@
+.tabs{
+  &-icon-vertical-responsive{
+    ul{
+      @extend .d-flex;
+      @extend .flex-nowrap;
+      @extend .flex-md-wrap;
+      @extend .mb-0;
+      li{
+        @extend .w-200px;
+        @extend .w-md-100p;
+        @extend .py-2;
+        @extend .px-3;
+        @extend .p-md-0;
+        @extend .rounded-8px;
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .justify-content-center;
+        @extend .justify-content-md-start;
+        @extend .bg-gray-6;
+        @extend .mx-2;
+        @extend .mx-md-0;
+        @extend .mb-3;
+        @include media-breakpoint-up(md) {
+          background-color: $white$imp;
+        }
+        &.react-tabs__tab--selected{
+          @extend .bg-white;
+          @extend .text-primary;
+        }
+        &:first-of-type{
+          @extend .ms-3;
+          @extend .ms-md-0;
+        }
+        &:last-of-type{
+          @extend .me-3;
+          @extend .me-md-0;
+        }
+        &:focus-visible{
+          @extend .outline-none;
+        }
+      }
+    }
+    .tab-list-reponsive{
+      @extend .d-flex;
+      @extend .overflow-x-auto;
+    }
+  }
+  &-horizontal-responsive{
+    ul{
+      @extend .d-flex;
+      @extend .flex-nowrap;
+      @extend .flex-md-wrap;
+      @extend .list-unstyled;
+      &[data-mobile-width="100"] li{
+        @extend .w-100px;
+        @extend .w-md-auto;
+      }
+      &[data-mobile-width="150"] li{
+        @extend .w-150px;
+        @extend .w-md-auto;
+      }
+    }
+    .tab-list-reponsive{
+      @extend .d-flex;
+      @extend .overflow-x-auto;
+    }
+  }
+  &-line{
+    li{
+      @extend .py-3;
+      @extend .px-3;
+      @extend .d-flex;
+      @extend .justify-content-center;
+      @extend .cursor-pointer;
+      &.react-tabs__tab--selected{
+        @extend .text-primary;
+        @extend .border-bottom-3-solid-primary;
+      }
+      &:focus-visible{
+        @extend .outline-none;
+      }
+    }
+    .tabs-line-disable .react-tabs__tab--selected{
+      @extend .border-none;
+    }
+  }
+  &-box{
+    .react-tabs__tab--selected{
+      @extend .bg-gray-1;
+      @extend .rounded-10px;
+    }
+    li{
+      @extend .p-2;
+      &:last-of-type{
+        @extend .mb-0;
+      }
+      &:focus-visible{
+        @extend .outline-none;
+      }
+    }
+  }
+  &-h-100 .react-tabs__tab-panel--selected{
+    @extend .h-100;
+  }
+  &-outline-icon{
+    .react-tabs__tab--selected{
+      svg{
+        @extend .text-white;
+      }
+      > div{
+        @extend .border-2-solid-primary;
+        > div{
+          @extend .bg-primary;
+        }
+      }
+    }
+    li{
+      > div{
+        @extend .rounded-10px;
+        @extend .p-3;
+        @extend .border-2-solid-gray-6;
+        > div{
+          @extend .bg-gray-6;
+        }
+      }
+    }
+  }
+}
